@@ -1,0 +1,42 @@
+.card {
+    width: 250px;
+    height: 250px;
+    border-radius: 10px;
+    margin: 5px;
+    background: #666;
+    color: white;
+}
+
+$react-rater-link: rgb(99, 90, 90) !default;
+$react-rater-hover: #666 !default;
+$react-rater-active: rgb(252, 248, 4) !default;
+
+.react-rater {
+  display: inline-block;
+  line-height: normal;
+  > * {
+    display: inline-block;
+  }
+}
+.react-rater-star {
+  cursor: pointer;
+  color: $react-rater-link;
+  position: relative;
+  &.will-be-active {
+    color: $react-rater-hover;
+  }
+  &.is-active {
+    color: $react-rater-active;
+  }
+  &.is-active-half:before {
+    color: $react-rater-active;
+    content: '\2605';
+    position: absolute;
+    left: 0;
+    width: 50%;
+    overflow: hidden;
+  }
+  &.is-disabled {
+    cursor: default;
+  }
+}
